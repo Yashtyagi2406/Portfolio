@@ -101,12 +101,14 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">React</div>
+                <div className="what-tags">React 18</div>
                 <div className="what-tags">TypeScript</div>
                 <div className="what-tags">Next.js</div>
                 <div className="what-tags">Three.js</div>
                 <div className="what-tags">GSAP</div>
-                <div className="what-tags">CSS</div>
+                <div className="what-tags">Vite</div>
+                <div className="what-tags">Tailwind CSS</div>
+                <div className="what-tags">Redux</div>
                 <div className="what-tags">JavaScript</div>
               </div>
               <div className="what-arrow"></div>
@@ -141,10 +143,16 @@ const WhatIDo = () => {
               <div className="what-content-flex">
                 <div className="what-tags">Node.js</div>
                 <div className="what-tags">Express.js</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">MySQL</div>
-                <div className="what-tags">REST APIs</div>
+                <div className="what-tags">Socket.io</div>
                 <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">MongoDB</div>
+                <div className="what-tags">Redis</div>
+                <div className="what-tags">Bull</div>
+                <div className="what-tags">Prisma ORM</div>
+                <div className="what-tags">JWT</div>
+                <div className="what-tags">Zod</div>
+                <div className="what-tags">MQTT</div>
+                <div className="what-tags">Kafka</div>
                 <div className="what-tags">Docker</div>
               </div>
               <div className="what-arrow"></div>

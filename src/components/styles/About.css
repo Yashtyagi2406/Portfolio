@@ -9,25 +9,67 @@
   width: var(--cWidth);
   margin: auto;
 }
+
+.about-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(196, 129, 255, 0.15) 0%, transparent 60%);
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 .about-me {
   padding: 50px 0px;
   padding-bottom: 0;
   width: 500px;
   max-width: calc(100% - 15px);
+  position: relative;
+  z-index: 1;
 }
+
 .about-me h3 {
   font-size: 25px;
   text-transform: uppercase;
   letter-spacing: 7px;
   font-weight: 400;
   color: var(--accentColor);
+  margin-bottom: 30px;
 }
 
-.about-me p {
-  font-size: 33px;
+.about-content-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.about-accent-line {
+  width: 4px;
+  background: linear-gradient(to bottom, var(--accentColor), transparent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.about-lead {
+  font-size: 32px;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
+  line-height: 1.3;
+  margin: 0 0 20px 0;
+  background: linear-gradient(90deg, #ffffff, #d9a0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px 4px 30px rgba(217, 160, 255, 0.3);
+}
+
+.about-sub {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #adacac;
+  margin: 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -35,16 +77,21 @@
     justify-content: center;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .about-me {
-    width: 500px;
+    width: 600px;
     max-width: calc(100% - 70px);
     transform: translateY(0%);
   }
-  .about-section {
-    opacity: 1;
+  .about-lead {
+    font-size: 40px;
+  }
+  .about-sub {
+    font-size: 20px;
   }
 }
+
 @media only screen and (min-width: 1025px) {
   .about-section {
     width: var(--cWidth);
@@ -56,16 +103,27 @@
   }
   .about-me {
     padding: 0px;
-    width: 50%;
+    width: 55%;
   }
-  .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
+  .about-glow {
+    left: 40%;
+    width: 800px;
+    height: 800px;
+  }
+  .about-lead {
+    font-size: 2.2vw;
+    line-height: 1.2;
+  }
+  .about-sub {
+    font-size: 1.1vw;
   }
 }
+
 @media only screen and (min-width: 1950px) {
-  .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+  .about-lead {
+    font-size: 2.8rem;
+  }
+  .about-sub {
+    font-size: 1.3rem;
   }
 }
