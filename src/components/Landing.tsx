@@ -93,11 +93,7 @@ const Landing = ({ children }: PropsWithChildren) => {
                 </span>
                 <span className="landing-im"> I'm</span>
               </h2>
-              <h1>
-                YASH
-                <br />
-                <span>TYAGI</span>
-              </h1>
+              <h1>YASH TYAGI</h1>
             </div>
           </div>
           <div className="landing-info">
