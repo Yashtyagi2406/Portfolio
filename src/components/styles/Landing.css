@@ -165,18 +165,18 @@
 .landing-intro h2 {
   margin: 0;
   color: var(--accentColor);
-  font-size: 17px;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
   white-space: nowrap;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .landing-intro h1 {
   margin: 0;
-  letter-spacing: 2px;
-  font-size: 28px;
-  line-height: 1.2;
+  letter-spacing: 4px;
+  font-size: 32px;
+  line-height: 1.25;
   font-weight: 500;
   white-space: nowrap;
   font-family: "Geist", sans-serif;
@@ -319,20 +319,20 @@ h2.landing-info-h2 {
     z-index: 15;
   }
   .landing-intro h2 {
-    font-size: 17px;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+    font-size: 18px;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
   }
   .landing-intro h1 {
-    font-size: 28px;
-    line-height: 1.2;
-    letter-spacing: 2px;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 4px;
     font-weight: 500;
   }
 
   .landing-info {
     bottom: auto;
-    top: 36%;
+    top: 48%;
     z-index: 15;
     text-align: left;
     transform: translate(0%, -50%);
@@ -349,20 +349,20 @@ h2.landing-info-h2 {
     z-index: 15;
   }
   .landing-intro h2 {
-    font-size: 18px;
-    letter-spacing: 1.2px;
-    margin-bottom: 6px;
+    font-size: 19px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
   }
   .landing-intro h1 {
-    font-size: 30px;
-    line-height: 1.2;
-    letter-spacing: 2px;
+    font-size: 34px;
+    line-height: 1.25;
+    letter-spacing: 4.5px;
     font-weight: 500;
   }
 
   .landing-info {
     bottom: auto;
-    top: 36%;
+    top: 48%;
     z-index: 15;
     text-align: left;
     transform: translate(0%, -50%);
@@ -379,14 +379,14 @@ h2.landing-info-h2 {
     z-index: 15;
   }
   .landing-intro h2 {
-    font-size: 20px;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    font-size: 22px;
+    letter-spacing: 3.5px;
+    margin-bottom: 10px;
   }
   .landing-intro h1 {
-    font-size: 34px;
-    line-height: 1.2;
-    letter-spacing: 2.5px;
+    font-size: 40px;
+    line-height: 1.25;
+    letter-spacing: 5px;
     font-weight: 500;
   }
   .landing-info h3 {
@@ -398,6 +398,15 @@ h2.landing-info-h2 {
   }
   h2.landing-info-h2 {
     font-size: 75px;
+  }
+  .landing-info {
+    bottom: auto;
+    top: 48%;
+    z-index: 15;
+    text-align: left;
+    transform: translate(0%, -50%);
+    right: auto;
+    left: 70%;
   }
 }
 
