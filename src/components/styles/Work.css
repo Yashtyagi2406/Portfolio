@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
   width: 100%;
   position: relative;
   z-index: 10;
 }
 .work-section h2 {
   margin: 0;
-  font-size: 70px;
+  font-size: 56px;
   font-weight: 500;
 }
 .work-section h2 > span {
@@ -20,22 +20,22 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #f1f5f9;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 .more-projects-btn .btn-arrow {
-  font-size: 16px;
+  font-size: 15px;
   transition: transform 0.25s ease;
 }
 .more-projects-btn:hover {
@@ -53,6 +53,7 @@
   height: 100vh;
   box-sizing: border-box;
   will-change: transform;
+  overflow: hidden;
 }
 .work-container {
   margin: auto;
@@ -60,25 +61,28 @@
   flex-direction: column;
   height: 100%;
   align-content: stretch;
+  justify-content: center;
 }
 .work-flex {
   width: 100%;
   display: flex;
-  height: 100%;
+  height: calc(100vh - 170px);
   margin-left: -80px;
   padding-right: 120px;
   position: relative;
+  align-items: center;
 }
 .work-box {
-  padding: 80px;
+  padding: 30px 60px;
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 560px;
+  height: 100%;
   box-sizing: border-box;
   border-right: 1px solid #363636;
   flex-shrink: 0;
-  gap: 50px;
-  justify-content: start;
+  gap: 25px;
+  justify-content: center;
 }
 .work-flex .work-box:nth-child(even) {
   flex-direction: column-reverse;
@@ -101,14 +105,14 @@
   justify-content: space-between;
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .work-title > div {
   text-align: right;
 }
 .work-title h3 {
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 42px;
+  line-height: 42px;
   margin: 0;
   font-weight: 600;
 }
@@ -122,24 +126,26 @@
   color: var(--accentColor, #a855f7);
 }
 .work-info h4 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
   margin: 0;
 }
 .work-info p {
-  font-weight: 200;
+  font-weight: 300;
   color: #adacac;
   margin: 0;
   margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.4;
 }
 .work-info > p {
-  width: 90%;
+  width: 95%;
 }
 .work-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-top: 12px;
   flex-wrap: wrap;
 }
 .work-action-btn {
@@ -241,22 +247,25 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: 350px;
+  max-height: 250px;
   object-fit: cover;
   display: block;
 }
 @media only screen and (max-height: 900px) {
   .work-image img {
-    max-height: 250px;
+    max-height: 220px;
   }
   .work-box {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 18px;
+  }
+  .work-header {
+    margin-top: 40px;
+    margin-bottom: 5px;
   }
   .work-section h2 {
-    font-size: 60px;
-    margin-bottom: 30px;
-    margin-top: 70px;
+    font-size: 48px;
   }
 }
 @media only screen and (max-width: 1400px) {
