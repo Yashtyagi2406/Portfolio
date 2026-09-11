@@ -11,6 +11,7 @@ export function setCharTimeline(
   }, 200);
   const tl1 = gsap.timeline({
     scrollTrigger: {
+      id: "char-tl1",
       trigger: ".landing-section",
       start: "top top",
       end: "bottom top",
@@ -20,6 +21,7 @@ export function setCharTimeline(
   });
   const tl2 = gsap.timeline({
     scrollTrigger: {
+      id: "char-tl2",
       trigger: ".about-section",
       start: "center 55%",
       end: "bottom top",
@@ -29,6 +31,7 @@ export function setCharTimeline(
   });
   const tl3 = gsap.timeline({
     scrollTrigger: {
+      id: "char-tl3",
       trigger: ".whatIDO",
       start: "top top",
       end: "bottom top",
@@ -67,7 +70,7 @@ export function setCharTimeline(
         .fromTo(character.rotation, { y: 0 }, { y: 0.7, duration: 1 }, 0)
         .to(camera.position, { z: 23.5 }, 0)
         .fromTo(".character-model", { x: 0 }, { x: "-32%", duration: 1 }, 0)
-        .to(".landing-container", { opacity: 0, duration: 0.4 }, 0)
+        .to(".landing-container", { opacity: 0, duration: 0.8 }, 0)
         .to(".landing-container", { y: "40%", duration: 0.8 }, 0)
         .fromTo(".about-me", { y: "-50%" }, { y: "0%" }, 0);
 
@@ -136,6 +139,7 @@ export function setCharTimeline(
 export function setAllTimeline() {
   const careerTimeline = gsap.timeline({
     scrollTrigger: {
+      id: "career-tl",
       trigger: ".career-section",
       start: "top 30%",
       end: "100% center",

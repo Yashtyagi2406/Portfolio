@@ -42,11 +42,8 @@ const setCharacter = (
                 }
               });
               resolve(gltf);
-              const workTrigger = ScrollTrigger.getById("work");
-              ScrollTrigger.getAll().forEach((trigger) => {
-                if (trigger !== workTrigger) {
-                  trigger.kill();
-                }
+              ["char-tl1", "char-tl2", "char-tl3", "career-tl"].forEach((id) => {
+                ScrollTrigger.getById(id)?.kill();
               });
               intensityInterval = setCharTimeline(character, camera);
               setAllTimeline();

@@ -3,8 +3,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-let refreshListenerRegistered = false;
-
 export default function setSplitText() {
   ScrollTrigger.config({ ignoreMobileResize: true });
   if (window.innerWidth < 900) return;
@@ -12,23 +10,23 @@ export default function setSplitText() {
   const paras = document.querySelectorAll<HTMLElement>(".para");
   const titles = document.querySelectorAll<HTMLElement>(".title");
 
-  const TriggerStart = window.innerWidth <= 1024 ? "top 60%" : "20% 60%";
-  const ToggleAction = "play pause resume reverse";
+  const TriggerStart = "top 80%";
 
   paras.forEach((para) => {
     para.classList.add("visible");
     gsap.fromTo(
       para,
-      { autoAlpha: 0, y: 40 },
+      { autoAlpha: 0, y: 30 },
       {
         autoAlpha: 1,
         scrollTrigger: {
-          trigger: para.parentElement?.parentElement,
-          toggleActions: ToggleAction,
+          trigger: para,
           start: TriggerStart,
+          toggleActions: "play none none none",
+          once: true,
         },
-        duration: 1,
-        ease: "power3.out",
+        duration: 0.8,
+        ease: "power2.out",
         y: 0,
       }
     );
@@ -37,23 +35,19 @@ export default function setSplitText() {
   titles.forEach((title) => {
     gsap.fromTo(
       title,
-      { autoAlpha: 0, y: 40 },
+      { autoAlpha: 0, y: 30 },
       {
         autoAlpha: 1,
         scrollTrigger: {
-          trigger: title.parentElement?.parentElement,
-          toggleActions: ToggleAction,
+          trigger: title,
           start: TriggerStart,
+          toggleActions: "play none none none",
+          once: true,
         },
         duration: 0.8,
-        ease: "power2.inOut",
+        ease: "power2.out",
         y: 0,
       }
     );
   });
-
-  if (!refreshListenerRegistered) {
-    ScrollTrigger.addEventListener("refresh", () => setSplitText());
-    refreshListenerRegistered = true;
-  }
 }

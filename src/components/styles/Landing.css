@@ -307,12 +307,13 @@ h2.landing-info-h2 {
     left: auto;
     right: 66%;
     transform: translate(0%, -50%);
+    z-index: 15;
   }
 
   .landing-info {
     bottom: auto;
     top: 51%;
-    z-index: inherit;
+    z-index: 15;
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
@@ -325,12 +326,13 @@ h2.landing-info-h2 {
     left: auto;
     right: 70%;
     transform: translate(0%, -50%);
+    z-index: 15;
   }
 
   .landing-info {
     bottom: auto;
     top: 51%;
-    z-index: inherit;
+    z-index: 15;
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
