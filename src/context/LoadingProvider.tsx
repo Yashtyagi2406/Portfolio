@@ -18,10 +18,14 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
   const [isLoading, setIsLoading] = useState(true);
   const [loading, setLoading] = useState(0);
 
+  const handleSetLoading = (val: number) => {
+    setLoading((prev) => (prev >= 100 ? 100 : Math.max(prev, val)));
+  };
+
   const value = {
     isLoading,
     setIsLoading,
-    setLoading,
+    setLoading: handleSetLoading,
   };
 
   return (

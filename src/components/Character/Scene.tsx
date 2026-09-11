@@ -26,7 +26,10 @@ const Scene = () => {
       let rect = canvasDiv.current.getBoundingClientRect();
       let container = { width: rect.width, height: rect.height };
       const aspect = container.width / container.height;
-      const scene = sceneRef.current;
+      let isMounted = true;
+      let animationFrameId: number;
+      const scene = new THREE.Scene();
+      sceneRef.current = scene;
 
       const renderer = new THREE.WebGLRenderer({
         alpha: true,
@@ -36,6 +39,11 @@ const Scene = () => {
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1;
+
+      // Clean up any stale canvas elements before appending
+      while (canvasDiv.current.firstChild) {
+        canvasDiv.current.removeChild(canvasDiv.current.firstChild);
+      }
       canvasDiv.current.appendChild(renderer.domElement);
 
       const camera = new THREE.PerspectiveCamera(14.5, aspect, 0.1, 1000);
@@ -56,6 +64,7 @@ const Scene = () => {
       const { promise: loadPromise, getIntensityInterval } = loadCharacter();
 
       loadPromise.then((gltf) => {
+        if (!isMounted) return;
         if (gltf) {
           const animations = setAnimations(gltf);
           hoverDivRef.current && animations.hover(gltf, hoverDivRef.current);
@@ -66,7 +75,9 @@ const Scene = () => {
           headBone = character.getObjectByName("spine006") || null;
           screenLight = character.getObjectByName("screenlight") || null;
           progress.loaded().then(() => {
+            if (!isMounted) return;
             setTimeout(() => {
+              if (!isMounted) return;
               light.turnOnLights();
               animations.startIntro();
             }, 2500);
@@ -110,7 +121,7 @@ const Scene = () => {
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
       const animate = () => {
-        requestAnimationFrame(animate);
+        animationFrameId = requestAnimationFrame(animate);
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -130,6 +141,9 @@ const Scene = () => {
       };
       animate();
       return () => {
+        isMounted = false;
+        progress.clear();
+        cancelAnimationFrame(animationFrameId);
         clearTimeout(debounce);
         scene.clear();
         renderer.dispose();
@@ -138,7 +152,7 @@ const Scene = () => {
         if (onResizeRef.current) {
           window.removeEventListener("resize", onResizeRef.current);
         }
-        if (canvasDiv.current) {
+        if (canvasDiv.current && renderer.domElement.parentNode === canvasDiv.current) {
           canvasDiv.current.removeChild(renderer.domElement);
         }
         if (landingDiv) {
