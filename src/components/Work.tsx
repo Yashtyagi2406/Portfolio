@@ -141,6 +141,50 @@ const Work = () => {
               link="https://github.com/Yashtyagi2406/instant-mechanic-dashboard"
             />
           </div>
+          <div className="work-box">
+            <div className="work-info">
+              <div className="work-title">
+                <h3>05</h3>
+                <div>
+                  <h4>
+                    <a href="https://github.com/Yashtyagi2406/lld-practice-platform" target="_blank" rel="noopener noreferrer" className="work-title-link">
+                      LLD Practice Platform
+                    </a>
+                  </h4>
+                  <p>System Design Evaluation</p>
+                </div>
+              </div>
+              <h4>Tools and features</h4>
+              <p>React, TypeScript, Vite, Tailwind CSS, Fastify / Node.js, AI Rubric Feedback, Monorepo</p>
+            </div>
+            <WorkImage
+              image="/images/lld_platform.png"
+              alt="LLD Practice Platform"
+              link="https://github.com/Yashtyagi2406/lld-practice-platform"
+            />
+          </div>
+          <div className="work-box">
+            <div className="work-info">
+              <div className="work-title">
+                <h3>06</h3>
+                <div>
+                  <h4>
+                    <a href="https://github.com/Yashtyagi2406/fault-tolerant-pipeline" target="_blank" rel="noopener noreferrer" className="work-title-link">
+                      Fault-Tolerant Pipeline
+                    </a>
+                  </h4>
+                  <p>Data Ingestion & Recovery</p>
+                </div>
+              </div>
+              <h4>Tools and features</h4>
+              <p>Node.js, Express, Content-Based Idempotency Keys, Write Failure Recovery, Event Normalization, Aggregation API</p>
+            </div>
+            <WorkImage
+              image="/images/fault_tolerant_pipeline.png"
+              alt="Fault Tolerant Ingestion Pipeline"
+              link="https://github.com/Yashtyagi2406/fault-tolerant-pipeline"
+            />
+          </div>
         </div>
       </div>
     </div>
