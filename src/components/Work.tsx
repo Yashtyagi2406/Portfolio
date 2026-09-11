@@ -58,7 +58,11 @@ const Work = () => {
               <div className="work-title">
                 <h3>01</h3>
                 <div>
-                  <h4>VolunteerCompass</h4>
+                  <h4>
+                    <a href="https://github.com/Yashtyagi2406/volunteer-compass" target="_blank" rel="noopener noreferrer" className="work-title-link">
+                      VolunteerCompass
+                    </a>
+                  </h4>
                   <p>Full-Stack Platform</p>
                 </div>
               </div>
@@ -66,9 +70,9 @@ const Work = () => {
               <p>React 18, TypeScript, Node.js, Express, PostgreSQL, Prisma, Socket.io, Redis, Bull, JWT, Zod, Vercel, Render</p>
             </div>
             <WorkImage
-              image="/images/react.webp"
-              alt="VolunteerCompass"
-              link="https://github.com/Yashtyagi2406"
+              image="/images/volunteer_compass.png"
+              alt="VolunteerCompass Live Platform"
+              link="https://github.com/Yashtyagi2406/volunteer-compass"
             />
           </div>
           <div className="work-box">
@@ -76,7 +80,11 @@ const Work = () => {
               <div className="work-title">
                 <h3>02</h3>
                 <div>
-                  <h4>Sync Home</h4>
+                  <h4>
+                    <a href="https://github.com/Yashtyagi2406" target="_blank" rel="noopener noreferrer" className="work-title-link">
+                      Sync Home
+                    </a>
+                  </h4>
                   <p>Hybrid IoT Home Automation</p>
                 </div>
               </div>
@@ -84,8 +92,8 @@ const Work = () => {
               <p>React, TypeScript, Vite, Three.js (R3F), GSAP, MQTT, TanStack Query, Tailwind CSS, Recharts, Vitest, Playwright</p>
             </div>
             <WorkImage
-              image="/images/next.webp"
-              alt="Sync Home IoT Dashboard"
+              image="/images/sync_home.png"
+              alt="Sync Home 3D IoT Visualization"
               link="https://github.com/Yashtyagi2406"
             />
           </div>
@@ -94,7 +102,11 @@ const Work = () => {
               <div className="work-title">
                 <h3>03</h3>
                 <div>
-                  <h4>AI Governance Platform</h4>
+                  <h4>
+                    <a href="https://github.com/Yashtyagi2406/AI-GCM" target="_blank" rel="noopener noreferrer" className="work-title-link">
+                      AI Governance Platform
+                    </a>
+                  </h4>
                   <p>SaaS / Enterprise</p>
                 </div>
               </div>
@@ -102,9 +114,31 @@ const Work = () => {
               <p>Next.js 14, TypeScript, Go, Python, PostgreSQL, ClickHouse, Kafka, Redis, Docker, Kubernetes, OPA (Rego), FastAPI, Terraform, AWS EKS</p>
             </div>
             <WorkImage
-              image="/images/node.webp"
+              image="/images/ai_governance.png"
               alt="AI Governance & Cost Management Platform"
-              link="https://github.com/Yashtyagi2406"
+              link="https://github.com/Yashtyagi2406/AI-GCM"
+            />
+          </div>
+          <div className="work-box">
+            <div className="work-info">
+              <div className="work-title">
+                <h3>04</h3>
+                <div>
+                  <h4>
+                    <a href="https://github.com/Yashtyagi2406/instant-mechanic-dashboard" target="_blank" rel="noopener noreferrer" className="work-title-link">
+                      Instant Mechanic
+                    </a>
+                  </h4>
+                  <p>Real-Time Operations Dashboard</p>
+                </div>
+              </div>
+              <h4>Tools and features</h4>
+              <p>Next.js, Express, PostgreSQL, Socket.io, Tailwind CSS, Recharts, TypeScript, REST APIs</p>
+            </div>
+            <WorkImage
+              image="/images/instant_mechanic.png"
+              alt="Instant Mechanic Operations Dashboard"
+              link="https://github.com/Yashtyagi2406/instant-mechanic-dashboard"
             />
           </div>
         </div>

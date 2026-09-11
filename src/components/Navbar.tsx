@@ -35,8 +35,9 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+        <a href="/#" className="navbar-title group" data-cursor="disable">
+          <span className="logo-badge">YT</span>
+          <span className="logo-text">YASH TYAGI</span>
         </a>
         <a
           href="mailto:Yashxtyagi06@gmail.com"

@@ -41,9 +41,42 @@
   font-weight: 500;
 }
 .navbar-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
   font-size: 14px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.25s ease;
+}
+.navbar-title:hover {
+  transform: translateY(-1px);
+}
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.35), rgba(59, 130, 246, 0.35));
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 16px rgba(147, 51, 234, 0.35);
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 800;
+  color: #f3e8ff;
+  letter-spacing: 1px;
+}
+.logo-text {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #ffffff 40%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media only screen and (min-width: 500px) {
   .header {

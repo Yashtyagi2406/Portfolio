@@ -20,7 +20,7 @@ const Scene = () => {
   const { setLoading } = useLoading();
   const onResizeRef = useRef<(() => void) | null>(null);
 
-  const [character, setChar] = useState<THREE.Object3D | null>(null);
+  const [, setChar] = useState<THREE.Object3D | null>(null);
   useEffect(() => {
     if (canvasDiv.current) {
       let rect = canvasDiv.current.getBoundingClientRect();
