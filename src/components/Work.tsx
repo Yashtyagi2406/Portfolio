@@ -80,11 +80,31 @@ const Work = () => {
               </div>
               <h4>Tools and features</h4>
               <p>React 18, TypeScript, Node.js, Express, PostgreSQL, Prisma, Socket.io, Redis, Bull, JWT, Zod, Vercel, Render</p>
+              <div className="work-actions">
+                <a
+                  href="https://volunteer-compass-tawny.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn live-btn"
+                  data-cursor="disable"
+                >
+                  <span className="live-dot"></span> Live Demo ↗
+                </a>
+                <a
+                  href="https://github.com/Yashtyagi2406/volunteer-compass"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn github-btn"
+                  data-cursor="disable"
+                >
+                  GitHub ↗
+                </a>
+              </div>
             </div>
             <WorkImage
               image="/images/volunteer_compass.png"
               alt="VolunteerCompass Live Platform"
-              link="https://github.com/Yashtyagi2406/volunteer-compass"
+              link="https://volunteer-compass-tawny.vercel.app"
             />
           </div>
           <div className="work-box">
@@ -93,7 +113,7 @@ const Work = () => {
                 <h3>02</h3>
                 <div>
                   <h4>
-                    <a href="https://github.com/Yashtyagi2406" target="_blank" rel="noopener noreferrer" className="work-title-link">
+                    <a href="https://github.com/Yashtyagi2406/synced-home-experience" target="_blank" rel="noopener noreferrer" className="work-title-link">
                       Sync Home
                     </a>
                   </h4>
@@ -102,11 +122,22 @@ const Work = () => {
               </div>
               <h4>Tools and features</h4>
               <p>React, TypeScript, Vite, Three.js (R3F), GSAP, MQTT, TanStack Query, Tailwind CSS, Recharts, Vitest, Playwright</p>
+              <div className="work-actions">
+                <a
+                  href="https://github.com/Yashtyagi2406/synced-home-experience"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn github-btn"
+                  data-cursor="disable"
+                >
+                  GitHub ↗
+                </a>
+              </div>
             </div>
             <WorkImage
               image="/images/sync_home.png"
               alt="Sync Home 3D IoT Visualization"
-              link="https://github.com/Yashtyagi2406"
+              link="https://github.com/Yashtyagi2406/synced-home-experience"
             />
           </div>
           <div className="work-box">
@@ -124,6 +155,17 @@ const Work = () => {
               </div>
               <h4>Tools and features</h4>
               <p>Next.js 14, TypeScript, Go, Python, PostgreSQL, ClickHouse, Kafka, Redis, Docker, Kubernetes, OPA (Rego), FastAPI, Terraform, AWS EKS</p>
+              <div className="work-actions">
+                <a
+                  href="https://github.com/Yashtyagi2406/AI-GCM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn github-btn"
+                  data-cursor="disable"
+                >
+                  GitHub ↗
+                </a>
+              </div>
             </div>
             <WorkImage
               image="/images/ai_governance.png"
@@ -146,6 +188,17 @@ const Work = () => {
               </div>
               <h4>Tools and features</h4>
               <p>Next.js, Express, PostgreSQL, Socket.io, Tailwind CSS, Recharts, TypeScript, REST APIs</p>
+              <div className="work-actions">
+                <a
+                  href="https://github.com/Yashtyagi2406/instant-mechanic-dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn github-btn"
+                  data-cursor="disable"
+                >
+                  GitHub ↗
+                </a>
+              </div>
             </div>
             <WorkImage
               image="/images/instant_mechanic.png"
@@ -168,6 +221,17 @@ const Work = () => {
               </div>
               <h4>Tools and features</h4>
               <p>React, TypeScript, Vite, Tailwind CSS, Fastify / Node.js, AI Rubric Feedback, Monorepo</p>
+              <div className="work-actions">
+                <a
+                  href="https://github.com/Yashtyagi2406/lld-practice-platform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn github-btn"
+                  data-cursor="disable"
+                >
+                  GitHub ↗
+                </a>
+              </div>
             </div>
             <WorkImage
               image="/images/lld_platform.png"
@@ -190,6 +254,17 @@ const Work = () => {
               </div>
               <h4>Tools and features</h4>
               <p>Node.js, Express, Content-Based Idempotency Keys, Write Failure Recovery, Event Normalization, Aggregation API</p>
+              <div className="work-actions">
+                <a
+                  href="https://github.com/Yashtyagi2406/fault-tolerant-pipeline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn github-btn"
+                  data-cursor="disable"
+                >
+                  GitHub ↗
+                </a>
+              </div>
             </div>
             <WorkImage
               image="/images/fault_tolerant_pipeline.png"
