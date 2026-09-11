@@ -124,6 +124,15 @@ const Work = () => {
               <p>React, TypeScript, Vite, Three.js (R3F), GSAP, MQTT, TanStack Query, Tailwind CSS, Recharts, Vitest, Playwright</p>
               <div className="work-actions">
                 <a
+                  href="https://69db5b6048cd0da8b256a86b--sync-home.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn live-btn"
+                  data-cursor="disable"
+                >
+                  <span className="live-dot"></span> Live Demo ↗
+                </a>
+                <a
                   href="https://github.com/Yashtyagi2406/synced-home-experience"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -137,7 +146,7 @@ const Work = () => {
             <WorkImage
               image="/images/sync_home.png"
               alt="Sync Home 3D IoT Visualization"
-              link="https://github.com/Yashtyagi2406/synced-home-experience"
+              link="https://69db5b6048cd0da8b256a86b--sync-home.netlify.app/"
             />
           </div>
           <div className="work-box">
@@ -190,6 +199,15 @@ const Work = () => {
               <p>Next.js, Express, PostgreSQL, Socket.io, Tailwind CSS, Recharts, TypeScript, REST APIs</p>
               <div className="work-actions">
                 <a
+                  href="https://instant-mechanic-dashboard-indol.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-action-btn live-btn"
+                  data-cursor="disable"
+                >
+                  <span className="live-dot"></span> Live Demo ↗
+                </a>
+                <a
                   href="https://github.com/Yashtyagi2406/instant-mechanic-dashboard"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -203,7 +221,7 @@ const Work = () => {
             <WorkImage
               image="/images/instant_mechanic.png"
               alt="Instant Mechanic Operations Dashboard"
-              link="https://github.com/Yashtyagi2406/instant-mechanic-dashboard"
+              link="https://instant-mechanic-dashboard-indol.vercel.app"
             />
           </div>
           <div className="work-box">
