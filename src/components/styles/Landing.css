@@ -184,25 +184,88 @@
   margin-bottom: 8px;
 }
 
-.landing-greeting {
+/* Hidden sizing measurement span */
+.greeting-measure {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: "Geist", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* Greeting ticker viewport with smooth width expansion */
+.greeting-ticker {
   display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: bottom;
+  height: 1.25em;
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: width;
+}
+
+.greeting-word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
   color: #e2b7ff;
   font-weight: 500;
   text-shadow: 0 0 20px rgba(196, 129, 255, 0.5);
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0px);
-  transition:
-    opacity 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
-    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
-    filter 0.22s ease;
+  line-height: 1.25em;
   will-change: transform, opacity, filter;
 }
 
-.landing-greeting.fading {
-  opacity: 0;
-  transform: scale(0.92);
-  filter: blur(4px);
+.greeting-word.active {
+  transform: translateY(0%);
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.greeting-word.roll-out {
+  animation: rollOut 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.greeting-word.roll-in {
+  animation: rollIn 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes rollOut {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: translateY(-120%);
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+@keyframes rollIn {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.landing-im {
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 1.25em;
+  margin-left: 8px;
 }
 
 .landing-intro h1 {
@@ -291,6 +354,9 @@ h2.landing-info-h2 {
   .landing-info h3 {
     font-size: 18px;
   }
+  .greeting-measure {
+    font-size: 24px;
+  }
   .landing-intro h2 {
     font-size: 24px;
     margin-bottom: 8px;
@@ -310,6 +376,9 @@ h2.landing-info-h2 {
 @media screen and (min-width: 768px) {
   .character-model {
     height: 80vh;
+  }
+  .greeting-measure {
+    font-size: 28px;
   }
   .landing-intro h2 {
     font-size: 28px;
@@ -343,10 +412,14 @@ h2.landing-info-h2 {
   }
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 70%;
+    left: 6%;
+    right: auto;
     transform: translate(0%, -50%);
     z-index: 15;
+  }
+  .greeting-measure {
+    font-size: 30px;
+    letter-spacing: 2px;
   }
   .landing-intro h2 {
     font-size: 30px;
@@ -372,10 +445,14 @@ h2.landing-info-h2 {
 @media screen and (min-width: 1200px) {
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 72%;
+    left: 7%;
+    right: auto;
     transform: translate(0%, -50%);
     z-index: 15;
+  }
+  .greeting-measure {
+    font-size: 34px;
+    letter-spacing: 2.5px;
   }
   .landing-intro h2 {
     font-size: 34px;
@@ -400,7 +477,15 @@ h2.landing-info-h2 {
 }
 @media screen and (min-width: 1600px) {
   .landing-intro {
-    right: 72%;
+    top: 50%;
+    left: 8%;
+    right: auto;
+    transform: translate(0%, -50%);
+    z-index: 15;
+  }
+  .greeting-measure {
+    font-size: 42px;
+    letter-spacing: 3px;
   }
   .landing-intro h2 {
     font-size: 42px;
