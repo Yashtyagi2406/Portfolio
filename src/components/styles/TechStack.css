@@ -1,12 +1,12 @@
 .techstack {
   width: 100%;
   position: relative;
-  min-height: 900px;
-  height: 95vh;
-  max-height: 1050px;
+  min-height: 850px;
+  height: 90vh;
+  max-height: 1000px;
   margin: auto;
-  margin-top: 40px;
-  padding-top: 80px;
+  margin-top: 10px;
+  padding-top: 24px;
   margin-bottom: 0px;
   overflow: hidden;
   display: flex;
@@ -26,8 +26,8 @@
   text-align: center;
   z-index: 10;
   pointer-events: none;
-  margin-top: 30px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .techstack-magic-title {
