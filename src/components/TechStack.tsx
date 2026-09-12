@@ -147,7 +147,8 @@ const TechStack = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const hoveredIndexRef = useRef<number | null>(null);
+  const [, setHoverTick] = useState(0);
 
   // 3D rotation state
   const rot = useRef({ x: 0.2, y: 0 });
@@ -184,13 +185,13 @@ const TechStack = () => {
 
     // Animation Loop
     const render = () => {
-      // Rotation physics
+      // Rotation physics - maintain constant steady rotation without slowing down on hover
       if (!isDragging.current) {
         velocity.current.x *= 0.94;
         velocity.current.y *= 0.94;
 
-        const baseSpeedY = hoveredIndex !== null ? 0.0006 : 0.0028;
-        const baseSpeedX = hoveredIndex !== null ? 0 : 0.0008;
+        const baseSpeedY = 0.0028;
+        const baseSpeedX = 0.0008;
 
         rot.current.y += velocity.current.y + baseSpeedY;
         rot.current.x += velocity.current.x + baseSpeedX;
@@ -305,7 +306,16 @@ const TechStack = () => {
 
         // Depth normalization: 0 at far back, 1 at direct front
         const normZ = (z2 + 1) / 2;
-        const isHovered = hoveredIndex === idx;
+
+        // FRONT-SIDE ONLY HOVER:
+        // An item is only hoverable / interactable if it is facing the viewer (z2 >= 0.02)
+        const isFront = z2 >= 0.02;
+        const isHovered = hoveredIndexRef.current === idx && isFront;
+
+        // If an active item rotated to the back, clear its hover state
+        if (hoveredIndexRef.current === idx && !isFront) {
+          hoveredIndexRef.current = null;
+        }
 
         const finalScale = (0.7 + 0.35 * normZ) * scale * (isHovered ? 1.3 : 1.0);
         const opacity = isHovered
@@ -316,6 +326,8 @@ const TechStack = () => {
         el.style.transform = `translate3d(${screenX}px, ${screenY}px, 0) translate(-50%, -50%) scale(${finalScale})`;
         el.style.opacity = `${opacity}`;
         el.style.zIndex = `${zIndex}`;
+        // Disable mouse interaction for back-side items so cursor only hovers front items
+        el.style.pointerEvents = isFront ? "auto" : "none";
         el.style.filter =
           !isHovered && z2 < -0.2 ? `blur(${(1 - normZ) * 1.5}px)` : "none";
       });
@@ -329,7 +341,7 @@ const TechStack = () => {
       cancelAnimationFrame(animFrameId.current);
       window.removeEventListener("resize", handleResize);
     };
-  }, [hoveredIndex]);
+  }, []);
 
   // Pointer drag event handlers
   const handlePointerDown = (e: React.PointerEvent) => {
@@ -388,8 +400,16 @@ const TechStack = () => {
                     "--item-color": item.color,
                   } as React.CSSProperties
                 }
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseEnter={() => {
+                  hoveredIndexRef.current = idx;
+                  setHoverTick((t) => t + 1);
+                }}
+                onMouseLeave={() => {
+                  if (hoveredIndexRef.current === idx) {
+                    hoveredIndexRef.current = null;
+                    setHoverTick((t) => t + 1);
+                  }
+                }}
               >
                 <div className="tech-icon-circle">
                   <Icon color={item.color} />
