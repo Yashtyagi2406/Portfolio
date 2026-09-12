@@ -371,7 +371,7 @@ const TechStack = () => {
   return (
     <div className="techstack" id="techstack">
       <div className="techstack-title-wrap">
-        <h2>My Techstack</h2>
+        <h2 className="techstack-magic-title">the magic behind</h2>
         <div className="techstack-subtitle">Interactive 3D Skill Cloud</div>
       </div>
 

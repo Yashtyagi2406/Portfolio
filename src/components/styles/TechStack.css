@@ -26,31 +26,36 @@
   text-align: center;
   z-index: 10;
   pointer-events: none;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
 
-.techstack-title-wrap h2 {
-  font-size: 48px;
+.techstack-magic-title {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif !important;
+  font-style: italic;
+  font-size: 64px;
   margin: 0;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  background: linear-gradient(180deg, #ffffff 40%, #c2a4ff 100%);
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 1.5px;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #ffffff 15%, #e9d5ff 55%, #c084fc 85%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0px 4px 30px rgba(194, 164, 255, 0.25);
+  filter: drop-shadow(0 4px 25px rgba(192, 132, 252, 0.4));
+  transition: all 0.3s ease;
 }
 
 .techstack-subtitle {
   font-size: 13px;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   color: var(--accentColor, #c2a4ff);
-  opacity: 0.8;
-  margin-top: 6px;
+  opacity: 0.75;
+  margin-top: 8px;
   font-weight: 400;
+  font-family: "Geist", sans-serif;
 }
 
 .tech-sphere-wrapper {
@@ -165,9 +170,9 @@
     min-height: 700px;
     height: 80vh;
   }
-  .techstack-title-wrap h2 {
-    font-size: 34px;
-    letter-spacing: 4px;
+  .techstack-magic-title {
+    font-size: 42px;
+    letter-spacing: 1px;
   }
   .tech-sphere-wrapper {
     height: 520px;
